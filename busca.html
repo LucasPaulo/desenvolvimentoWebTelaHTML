@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>beerHourBuscador</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome CSS -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <!-- Template js -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/contact_me.js"></script>
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/script.js"></script>
+     <!--http://www.frontendbrasil.com.br/tutoriais/html5-geolocalizacao-usando-a-api-do-google-maps/-->   
+	<script type="text/javascript">
+            function success(position) {
+    var s = document.querySelector('#status');
+
+    if (s.className == 'success') {
+        return;
+    }
+
+    s.innerHTML = "Você foi localizado!";
+    s.className = 'success';
+
+    var mapcanvas = document.createElement('div');
+        mapcanvas.id = 'mapcanvas';
+        mapcanvas.style.height = '400px';
+        mapcanvas.style.width = '560px';
+
+    document.querySelector('article').appendChild(mapcanvas);
+
+    var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+    var myOptions = {
+        zoom: 15,
+        center: latlng,
+        mapTypeControl: false,
+        navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title:"Você está aqui!"
+    });
+
+}
+
+function error(msg) {
+    var s = document.querySelector('#status');
+        s.innerHTML = typeof msg == 'string' ? msg : "falhou";
+        s.className = 'fail';
+}
+
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+} else {
+    error('Seu navegador não suporta <b style="color:black;background-color:#ffff66">Geolocalização</b>!');
+}
+</script>
+<style type="text/css">
+    #geo{
+        width: 450px;
+        height: 450px;
+        margin-bottom: 50px;
+
+    }
+
+</style>
+
+</head>
+    
+    <body>
+        
+        <!-- Start Logo Section -->
+        <section id="logo-section" class="text-center">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-12">
+                        
+                        <div class="logo text-center">
+                            <h1>Beer Hour</h1>
+                            <span>A cerveja gelada mais próxima!</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="mainbody-section text-center">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-3">
+                    </div>
+                    
+                    <div class="col-md-6">
+                        
+        <div class="home-slider">
+        <div class="jumbotron hero">
+        <form class="bootstrap-form-with-validation">
+            <div class="form-group">
+                <label class="control-label" for="search-input">Onde estou</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><span> <i class="glyphicon glyphicon-search"></i></span></div>
+                    <input class="form-control" type="search" name="search-input" id="search-input">
+                </div>
+            </div>
+            <div class="form-group"></div>
+            <div class="form-group"></div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Localizar bares</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<section id="geo">
+    <article>
+        <p><span id="status">Por favor aguarde enquanto nós tentamos locar você...</span></p>
+    </article>
+ </section>
+
+                        <!-- Start Carousel Section -->
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="menu-item color responsive">
+                                    <a href="#service-modal" data-toggle="modal">
+                                        <i class="fa fa-area-chart"></i>
+                                        <p>Pesquisar bar</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="menu-item light-orange responsive-2">
+                                    <a href="#team-modal" data-toggle="modal">
+                                        <i class="fa fa-users"></i>
+                                        <p>Criar evento</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item light-green responsive-2">
+                                    <a href="#team-modal" data-toggle="modal">
+                                        <i class="fa fa-users"></i>
+                                        <p>Top Happy Hour</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="menu-item light-blue responsive-2">
+                                    <a href="#team-modal" data-toggle="modal">
+                                        <i class="fa fa-users"></i>
+                                        <p>Avaliar Happy Hour</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+            </div>
+        </div>
+
+        <div class="copyright text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>Beer Hour - 2017</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Section -->
+ </body>
+    
+</html>
