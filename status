@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Convidados</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+    
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet"> 
+  
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+  
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+<style type="text/css">
+  /* Progress Tracker v2 */
+
+ol.progress[data-steps="2"] li {
+  width: 49%;
+}
+ol.progress[data-steps="3"] li {
+  width: 33%;
+}
+ol.progress[data-steps="4"] li {
+  width: 24%;
+}
+ol.progress[data-steps="5"] li {
+  width: 19%;
+}
+ol.progress[data-steps="6"] li {
+  width: 16%;
+}
+ol.progress[data-steps="7"] li {
+  width: 14%;
+}
+ol.progress[data-steps="8"] li {
+  width: 12%;
+}
+ol.progress[data-steps="9"] li {
+  width: 11%;
+}
+.progress {
+  width: 100%;
+  list-style: none;
+  list-style-image: none;
+  margin: 20px 0 20px 0;
+  padding: 0;
+}
+.progress li {
+  float: left;
+  text-align: center;
+  position: relative;
+}
+.progress .name {
+  display: block;
+  vertical-align: bottom;
+  text-align: center;
+  margin-bottom: 1em;
+  color: black;
+  opacity: 0.3;
+}
+.progress .step {
+  color: black;
+  border: 3px solid silver;
+  background-color: silver;
+  border-radius: 50%;
+  line-height: 1.2;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  z-index: 0;
+}
+.progress .step span {
+  opacity: 0.3;
+}
+.progress .active .name,
+.progress .active .step span {
+  opacity: 1;
+}
+.progress .step:before {
+  content: "";
+  display: block;
+  background-color: silver;
+  height: 0.4em;
+  width: 50%;
+  position: absolute;
+  bottom: 0.6em;
+  left: 0;
+  z-index: -1;
+}
+.progress .step:after {
+  content: "";
+  display: block;
+  background-color: silver;
+  height: 0.4em;
+  width: 50%;
+  position: absolute;
+  bottom: 0.6em;
+  right: 0;
+  z-index: -1;
+}
+.progress li:first-of-type .step:before {
+  display: none;
+}
+.progress li:last-of-type .step:after {
+  display: none;
+}
+.progress .done .step,
+.progress .done .step:before,
+.progress .done .step:after,
+.progress .active .step,
+.progress .active .step:before {
+  background-color: yellowgreen;
+}
+.progress .done .step,
+.progress .active .step {
+  border: 3px solid yellowgreen;
+}
+.title{
+position: left; 
+}
+
+</style>
+
+</head>
+
+<body>
+<!--section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Convidados</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Lista de convidados, </p>
+        </div>
+      </div>
+    </div>
+</section>
+-->
+
+<div class="container wow fadeInUp title">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="container">
+				<h3 class="section-title">Lista de Convidados</h3>
+				<div class="section-title-divider"></div>
+				<p>Descrição da lista de conivdados</p>
+				<div class="table-responsive">
+				<!-- Tabela com filtro -->
+				<table class="table table-hover" id="id_da_tabela">
+      				<thead>
+						<tr>
+							<td>Nome</td>
+							<td>Sobrenome</td>
+							<td>Contato</td>
+							<td>Status</td>
+						</tr>
+					</thead>	
+						<tbody>
+							<tr>
+								<td>Lucas Paulo</td>
+								<td>Cunha e Silva</td>
+								<td>lucas_pcsilv@hotmail.com</td>
+								<td>Confirmado</td>
+							</tr>
+							<tr>
+								<td>Felipe</td>
+								<td>Matheus Jesus</td>
+								<td>tenhoCabelo_branco@hotmail.com</td>
+								<td>Não vai</td>
+							</tr>
+							<tr>
+								<td>Matheus</td>
+								<td>Gosta</td>
+								<td>DaLaisla_tadinho@hotmail.com</td>
+								<td>Eperando resposta</td>
+							</tr>
+							
+						</tbody>
+						
+				</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+	    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css">
+	    <script>
+	    $(document).ready(function(){
+		    $('#id_da_tabela').DataTable({
+		    	"language": {
+		            "lengthMenu": "Mostrando _MENU_ registros por página",
+		            "zeroRecords": "Nada encontrado",
+		            "info": "Mostrando página _PAGE_ de _PAGES_",
+		            "infoEmpty": "Nenhum registro disponível",
+		            "infoFiltered": "(filtrado de _MAX_ registros no total)"
+		        }
+		    });
+		});
+	    </script>
+<!-- Teste de tabela com filtro-->
+
+  <section id="services">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Serviços</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Crie e compartilhe, com apenas quatro passos.</p>
+              <ol class="progress" data-steps="4">
+                <li class="done">
+                  <span class="name">Inicio</span>
+                  <span class="step"><span>1</span></span>
+                </li>
+                <li class="done">
+                  <span class="name">Criar Evento</span>
+                  <span class="step"><span>2</span></span>
+                </li>
+                <li class="done">
+                  <span class="name">Compartilhar</span>
+                  <span class="step"><span>3</span></span>
+                </li>
+                <li class="done">
+                  <span class="name">Curtir</span>
+                  <span class="step"><span>4</span></span>
+                </li>
+              </ol>
+                   <button class="btn btn-primary" type="submit" style="margin-left: 500px;">Confirmar</button> 
+      </div>
+      </div>
+    </div>  
+  </section>
+ 
+  <section id="contact">
+    <div class="container wow fadeInUp">
+  <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright">
+              &copy; Copyright <strong>Beer Hour</strong>. All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!--
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/morphext/morphext.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/stickyjs/sticky.js"></script>
+  <script src="lib/easing/easing.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script> -->
+</body>
+</html>
+<!-- Ideias 
+- colocar Na pagina inicial um menu - https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_tabs&stacked=h
+colocar na mesma página ou dividir em varias páginas?
+
+-->
+<!-- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_table_hover&stacked=h -->
